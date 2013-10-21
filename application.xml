@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="hxPong" package="com.example.hxPong" version="1.0.0" company="Marco" />
+	
+	<!-- output -->
+	<app main="Main" file="hxPong" path="bin" />
+	
+	<window background="#000000" fps="30" />
+	<window width="800" height="480" unless="mobile" />
+	<window fullscreen="true" if="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="openfl-bitfive" if="html5" />
+	<haxelib name="HaxePunk" />
+	
+	<!-- assets -->
+	<icon path="assets/HaxePunk.svg" />
+	<assets path="assets/graphics" rename="graphics" />
+	<assets path="assets/audio" rename="audio" />
+	<assets path="assets/font" rename="font" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
